@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{cfa3dd59-9566-4dc9-8169-468c55157d3b}">
+		<property name="assetPath">
+			<value>Front Mouth Amb/Frogs/633207__suoguolh__frogs.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>42.64698412698413</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f1fa6aa-c249-48d1-bf1e-8b78673d93a3}</destination>
+		</relationship>
+	</object>
+</objects>

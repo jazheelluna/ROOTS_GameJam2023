@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{6f01228e-a892-4627-b682-bb005c25f7f0}">
+		<property name="assetPath">
+			<value>Front Mouth Amb/Frogs/532235__shaunhillyard__frog-croaking-uk-common-frog.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>39.82814583333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f1fa6aa-c249-48d1-bf1e-8b78673d93a3}</destination>
+		</relationship>
+	</object>
+</objects>
