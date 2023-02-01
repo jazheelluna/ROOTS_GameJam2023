@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class TeethSpawnerScript : MonoBehaviour
 {
+    [SerializeField] private bool isTopTeeth;
     [SerializeField] private GameObject toothPrefab;
     [SerializeField] private int toothCount = 10;
     [SerializeField] private Vector3 offsetDirection = Vector3.right;
 
+    private Quaternion rot = Quaternion.identity;
+
     private void Awake()
     {
+        if (isTopTeeth)
+        {
+            rot = Quaternion.Euler(new Vector3(0, 0, 180));
+        }
+
         for (int i = 0; i < toothCount; i++)
         {
             if (i == 0)
             {
-                Instantiate(toothPrefab, this.transform);
+                Instantiate(toothPrefab, transform.position, rot, this.transform);
             }
             else if (i > 0)
             {
-                Instantiate(toothPrefab, transform.position + (offsetDirection * i), Quaternion.identity, this.transform);
+                Instantiate(toothPrefab, transform.position + (offsetDirection * i), rot, this.transform);
             }
         }
     }
