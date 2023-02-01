@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    public int score = 0;
+
     private Player2Input player2;
     [SerializeField] private Animator roofAnimator;
+    [SerializeField] private TextMeshProUGUI scoreUI;
 
     bool isRoofOpen = false;
 
@@ -44,5 +48,7 @@ public class GameManager : MonoBehaviour
 
             }
         }
+
+        scoreUI.text = "Score: " + score.ToString();
     }
 }

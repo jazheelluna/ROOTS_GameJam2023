@@ -35,40 +35,49 @@ public partial class @Player2Input : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Gyro"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""83f77cc1-e297-4e8f-851b-3eeb2d3fa86b"",
+                    ""expectedControlType"": ""Vector3"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""400bca29-71b2-4143-9958-a7e2e31e1af5"",
+                    ""id"": ""2ef7887a-4dca-447a-bd94-feb603753f5b"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Default"",
+                    ""groups"": """",
                     ""action"": ""Open"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d57f885-80b0-4f23-850a-78c4ad87139a"",
+                    ""path"": ""<Gyroscope>/angularVelocity"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gyro"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": [
-        {
-            ""name"": ""Default"",
-            ""bindingGroup"": ""Default"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        }
-    ]
+    ""controlSchemes"": []
 }");
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Open = m_Player2.FindAction("Open", throwIfNotFound: true);
+        m_Player2_Gyro = m_Player2.FindAction("Gyro", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -129,11 +138,13 @@ public partial class @Player2Input : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player2;
     private IPlayer2Actions m_Player2ActionsCallbackInterface;
     private readonly InputAction m_Player2_Open;
+    private readonly InputAction m_Player2_Gyro;
     public struct Player2Actions
     {
         private @Player2Input m_Wrapper;
         public Player2Actions(@Player2Input wrapper) { m_Wrapper = wrapper; }
         public InputAction @Open => m_Wrapper.m_Player2_Open;
+        public InputAction @Gyro => m_Wrapper.m_Player2_Gyro;
         public InputActionMap Get() { return m_Wrapper.m_Player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -146,6 +157,9 @@ public partial class @Player2Input : IInputActionCollection2, IDisposable
                 @Open.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOpen;
                 @Open.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOpen;
                 @Open.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnOpen;
+                @Gyro.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnGyro;
+                @Gyro.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnGyro;
+                @Gyro.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnGyro;
             }
             m_Wrapper.m_Player2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -153,21 +167,16 @@ public partial class @Player2Input : IInputActionCollection2, IDisposable
                 @Open.started += instance.OnOpen;
                 @Open.performed += instance.OnOpen;
                 @Open.canceled += instance.OnOpen;
+                @Gyro.started += instance.OnGyro;
+                @Gyro.performed += instance.OnGyro;
+                @Gyro.canceled += instance.OnGyro;
             }
         }
     }
     public Player2Actions @Player2 => new Player2Actions(this);
-    private int m_DefaultSchemeIndex = -1;
-    public InputControlScheme DefaultScheme
-    {
-        get
-        {
-            if (m_DefaultSchemeIndex == -1) m_DefaultSchemeIndex = asset.FindControlSchemeIndex("Default");
-            return asset.controlSchemes[m_DefaultSchemeIndex];
-        }
-    }
     public interface IPlayer2Actions
     {
         void OnOpen(InputAction.CallbackContext context);
+        void OnGyro(InputAction.CallbackContext context);
     }
 }
