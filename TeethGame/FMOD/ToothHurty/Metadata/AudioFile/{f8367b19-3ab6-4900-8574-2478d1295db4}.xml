@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f8367b19-3ab6-4900-8574-2478d1295db4}">
+		<property name="assetPath">
+			<value>UI/ToothbrushUI_short.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.11408163265306122</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f1fa6aa-c249-48d1-bf1e-8b78673d93a3}</destination>
+		</relationship>
+	</object>
+</objects>

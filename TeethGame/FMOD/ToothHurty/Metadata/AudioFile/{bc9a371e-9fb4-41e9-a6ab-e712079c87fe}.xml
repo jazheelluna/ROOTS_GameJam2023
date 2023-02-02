@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{bc9a371e-9fb4-41e9-a6ab-e712079c87fe}">
+		<property name="assetPath">
+			<value>Footsteps/DES_Footstep_Paw_Medium_Walk_Water_18.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.1546666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f1fa6aa-c249-48d1-bf1e-8b78673d93a3}</destination>
+		</relationship>
+	</object>
+</objects>

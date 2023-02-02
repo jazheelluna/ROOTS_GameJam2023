@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{b292dded-0e6d-4179-b7c5-a9534b85b77d}">
 		<property name="name">
-			<value>Tooth Taps</value>
+			<value>Tooth Fall</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
