@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{3dff7b2f-de38-4fa0-9615-084695ab17fa}">
+		<property name="name">
+			<value>MouthClosed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dba813e6-c5bf-4193-b79c-4a21640e12f0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5f5384dc-0406-404f-ba0a-0f5a3d0ea9bf}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5f5384dc-0406-404f-ba0a-0f5a3d0ea9bf}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
