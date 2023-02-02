@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,11 +48,13 @@ public class GameManager : MonoBehaviour
                 if (!isRoofOpen)
                 {
                     isRoofOpen = true;
+                    RuntimeManager.StudioSystem.setParameterByName("MouthClosed", 0);
                     roofAnimator.SetTrigger("Open");
                 }
                 else
                 {
                     isRoofOpen = false;
+                    RuntimeManager.StudioSystem.setParameterByName("MouthClosed", 1);
                     roofAnimator.SetTrigger("Close");
                 }
 
