@@ -60,6 +60,17 @@ public partial class @Player2Input : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""5fd27b43-fdf5-4185-8762-e6e58e03f9ec"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Open"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9d57f885-80b0-4f23-850a-78c4ad87139a"",
                     ""path"": ""<Gyroscope>/angularVelocity"",
                     ""interactions"": """",
