@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{f8281241-8c37-4879-9270-0df04b7322c2}">
 		<property name="assetPath">
-			<value>MenuIdea_Tense.wav</value>
+			<value>Stomach Sounds/MenuIdea_Tense.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
